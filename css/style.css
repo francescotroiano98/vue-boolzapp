@@ -60,3 +60,20 @@ background-color: rgb(2, 131, 88);
     border: 2px solid rgb(54, 102, 96);
 
 }
+
+.selected-profile{
+    height: 7%;
+    width: 100%;
+    border: 2px solid salmon;
+}
+.message{
+
+    height: 86%;
+    border: 2px solid white;
+
+}
+.chat{
+    height: 7%;
+    width: 100%;
+    border: 2px solid salmon;
+}
