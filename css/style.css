@@ -70,6 +70,8 @@ background-color: rgb(2, 131, 88);
 
     height: 86%;
     border: 2px solid white;
+    background-image: url(../img/mine.jpg);
+    
 
 }
 .chat{
