@@ -35,3 +35,28 @@ background-color: rgb(2, 131, 88);
     height: 100%;
     background-color: blue;
 }
+.profile{
+
+    height: 7%;
+    width: 100%;
+    border: 2px solid salmon;
+
+}
+.notifications{
+    height: 8.5%;
+    width: 100%;
+    border: 2px solid rgb(17, 255, 0);
+
+}
+.research{
+    height: 4.5%;
+    width: 100%;
+    border: 2px solid rgb(2, 4, 1);
+
+}
+.contacts{
+    height: 80%;
+    width: 100%;
+    border: 2px solid rgb(54, 102, 96);
+
+}
