@@ -27,7 +27,7 @@
             <section class="left-container">
                 <div class="profile container d-flex align-items-center justify-content-between">
                     <div class="d-flex align-items-center">
-                        <div class="circle-profile-layout me-2">
+                        <div class="circle-profile-layout rounded-5 me-2">
                             <img class="rounded-circle" src="img/avatar_io.jpg" alt="">
                         </div>
                         <div class="d-flex flex-column">
@@ -43,11 +43,30 @@
                         <a href="#"><i class="fa-solid fa-ellipsis-vertical ms-3" style="color: #aeb0b1;"></i></a>
                     </div>
                 </div>
-                <div class="notifications">
+                <div class="notifications d-flex align-items-center container">
+                    <div class="circle-profile-layout rounded-5 me-2">
+                        <i class="fa-solid fa-bell-slash" style="color:#8edafc;"></i>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <p class="m-0">
+                            Ricevi notifiche di nuovi messaggi
+                        </p>
+                        <span class="last-access">
+                            <a href="#">Attiva notifiche desktop</a>
+                        </span>
+                    </div>
 
                 </div>
-                <div class="research">
+                <div class="research d-flex align-items-center px-1 w-100">
 
+                    <div class="input-group input-group-sm">
+
+                        <span class="input-group-text" style="height: 24px; background-color: white; border: none;" id="inputGroup-sizing-sm"><a href="#"><i class="fa-solid fa-magnifying-glass" style="color:#aeb0b1;"></i></a></span>
+                        
+                        <input type="text" class="form-control" style="height: 24px; font-size: small; border: none;" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Scrivi o inizia una nuova chat">
+                      
+                    </div>
+                      
                 </div>
                 <div class="contacts overflow-scroll"> <!--QUI ANDRA' MESSO IL V-FOR CON TUTTI I CONTATTI-->
 
@@ -64,7 +83,7 @@
 
                 <div class="selected-profile container d-flex justify-content-between align-items-center ">
                     <div class="d-flex">
-                        <div class="circle-profile-layout me-2">
+                        <div class="circle-profile-layout rounded-5 me-2">
                             <img class="rounded-circle" src="img/avatar_1.jpg" alt="">
                         </div>
                         <div class="d-flex flex-column">
