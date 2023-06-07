@@ -70,7 +70,19 @@
                 </div>
 
                 <div class="contacts overflow-scroll"> <!--QUI ANDRA' MESSO IL V-FOR CON TUTTI I CONTATTI-->
-                    
+                    <div class="d-flex container p-2" v-for="(item, index) in contacts">
+                        <div class="circle-profile-layout rounded-5 me-2">
+                            <img class="rounded-circle" :src="contacts[index].avatar" alt="">
+                        </div>
+                        <div class="d-flex flex-column">
+                            <p class="m-0">
+                                {{item.name}}
+                            </p>
+                            <span class="last-access">
+                                Ultimo messaggio inviato
+                            </span>
+                        </div>
+                    </div>
                 </div>
 
             </section>
@@ -91,7 +103,7 @@
                             <p class="m-0">
                                 Michele
                             </p>
-                            <span class="last-access"s>
+                            <span class="last-access">
                                 Ultimo accesso oggi alle 12:00
                             </span>
                         </div>
@@ -115,11 +127,11 @@
                         </div>
                         <div class="col-6 ps-5">
 
-                            <div class="green-message bg-success w-100 rounded-3 p-2 mb-2">
+                            <div class="green-message w-100 rounded-3 p-2 mb-2">
                                 <p class="m-0">Hai portato il cane a casa?</p>
                                 
                             </div>
-                            <div class="green-message bg-success w-100 rounded-3 p-2 mb-2">
+                            <div class="green-message w-100 rounded-3 p-2 mb-2">
                                 
                                 <p class="m-0">Ricordati di stendere i panni</p>
 
