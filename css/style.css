@@ -3,3 +3,35 @@
     padding: 0;
     box-sizing: border-box;    
 }
+.body-top-bg{
+height: 15vh;
+background-color: rgb(2, 131, 88);
+}
+.body-bottom-bg{
+    height: 85vh;
+    background-color: rgb(204, 224, 217);
+}
+.chat-container{
+    display: flex;
+    height: 95vh;
+    width: 80%;
+    top: 20px;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.left-container{
+
+    width: 40vw;
+    height: 100%;
+    background-color: red;
+
+}
+.right-container{
+    width: 60vw;
+    height: 100%;
+    background-color: blue;
+}
