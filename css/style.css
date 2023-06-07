@@ -62,7 +62,7 @@ background-color:#009688;
 .contacts{
     height: 80%;
     width: 100%;
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(255, 255, 255);
 
 }
 
@@ -71,6 +71,9 @@ background-color:#009688;
     width: 100%;
     background-color:#eaeaea;
     
+}
+.selected:hover{
+    background-color:#e9ebeb;
 }
 .message{
 

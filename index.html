@@ -70,7 +70,7 @@
                 </div>
 
                 <div class="contacts overflow-scroll"> <!--QUI ANDRA' MESSO IL V-FOR CON TUTTI I CONTATTI-->
-                    <div class="d-flex container p-2" v-for="(item, index) in contacts">
+                    <div class="d-flex container p-2 selected" v-for="(item, index) in contacts">
                         <div class="circle-profile-layout rounded-5 me-2">
                             <img class="rounded-circle" :src="contacts[index].avatar" alt="">
                         </div>
