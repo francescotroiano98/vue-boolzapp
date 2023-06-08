@@ -70,7 +70,7 @@
                 </div>
 
                 <div class="contacts"> <!--QUI ANDRA' MESSO IL V-FOR CON TUTTI I CONTATTI-->
-                    <div class="d-flex justify-content-between container p-2 selected" v-for="(item, index) in contacts">
+                    <div id="my-contacts" class="d-flex justify-content-between container p-2 selected" v-for="(item, index) in contacts" :class="{ 'selected-contact': isContactSelected(index) }" v-for="(item, index) in contacts" @click="selectContact(index)">
 
                         <div class="d-flex">
 

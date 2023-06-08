@@ -34,9 +34,9 @@ background-color:#009688;
 }
 .right-container{
     width: 60vw;
-    height: 100%;
-    
+    height: 100%; 
 }
+
 .profile{
 
     height: 7%;
@@ -74,6 +74,10 @@ background-color:#009688;
     
 }
 .selected:hover{
+    background-color:#e9ebeb;
+    cursor: pointer;
+}
+.selected-contact{
     background-color:#e9ebeb;
 }
 .message{

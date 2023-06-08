@@ -174,17 +174,27 @@ createApp({
                     status: 'received'
                 }
             ],
+            
+            
         }
-    ]
-    
+        
+    ],
+    selectedContactIndex: null
         
 
  
     };
   },
   methods: {
-
-    
-
-  },
+    selectContact(index) {
+      if (this.selectedContactIndex === index) {
+        this.selectedContactIndex = null; // Deseleziona il contatto se è già selezionato
+      } else {
+        this.selectedContactIndex = index; // Seleziona il nuovo contatto
+      }
+    },
+    isContactSelected(index) {
+      return this.selectedContactIndex === index;
+    }
+  }
 }).mount('#app');
