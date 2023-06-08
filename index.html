@@ -130,7 +130,7 @@
                 <div class="message py-4 px-5" v-if="contacts[selectedContactIndex]">
                     <div class="row d-flex">
                         <div class="col-6 pe-5" style="margin-top: 9rem;">
-                            <div class="white-message d-flex justify-content-between bg-white w-100 rounded-3 p-2 mb-2" v-if="contacts[selectedContactIndex].messages" v-for="message in contacts[selectedContactIndex].messages">
+                            <div class="white-message d-flex justify-content-between bg-white w-100 rounded-3 p-2 mb-2" v-for="message in contacts[selectedContactIndex].messages">
                                 <p class="m-0">{{ message.message }}</p>
                                 <div class="d-flex align-items-ends mt-3">
                                     <span class="last-message">
