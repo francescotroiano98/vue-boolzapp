@@ -21,6 +21,8 @@ background-color:#009688;
     margin-left: auto;
     margin-right: auto;
     min-width: 900px;
+    background-image: url(../img/mine.jpg);
+    
 
 }
 
@@ -130,4 +132,5 @@ p{
 }
 .white-message{
     min-width: 190px;
+    background-color: white;
 }

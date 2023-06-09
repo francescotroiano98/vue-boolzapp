@@ -22,7 +22,7 @@
 
     <div id="app">
 
-        <section class="chat-container bg-info position-absolute">
+        <section class="chat-container position-absolute">
 
             <section class="left-container">
                 <div class="profile container d-flex align-items-center justify-content-between">
@@ -128,49 +128,39 @@
 
                 </div>
                 <div class="message py-4 px-5" v-if="contacts[selectedContactIndex]">
-                    <div class="row justify-content-end">    
-                        <div class="col-6 ps-5">
+                    <div v-for="(message, index) in contacts[selectedContactIndex].messages">
+
+                        <div class="row justify-content-end">
+                            <div class="col-6 ps-5">
+                                
+
+                                    <div class="d-flex justify-content-between green-message w-100 rounded-3 p-2 mb-2" v-if="message.status === 'sent'">
+                                        <p class="m-0">{{ message.message }}</p>
+                                        <div class="d-flex align-items-ends mt-3">
+                                            <span class="last-message">12:00</span>
+                                        </div>
+                                    </div>
+                                    
+                                
+                            </div>
+                        </div> 
+                        <div class="row justify-content-start">
+
+                            <div class="col-6 ps-5">
+                                
+
+                                    <div class="d-flex justify-content-between white-message w-100 rounded-3 p-2 mb-2" v-if="message.status === 'received'">
+                                        <p class="m-0">{{ message.message }}</p>
+                                        <div class="d-flex align-items-ends mt-3">
+                                            <span class="last-message">12:00</span>
+                                        </div>
+                                    </div>
+                                    
+                                
+                            </div>         
                             
-                            <div v-for="message in contacts[selectedContactIndex].messages">
-
-                                <div class="d-flex justify-content-between green-message w-100 rounded-3 p-2 mb-2" v-if="message.status === 'sent'">
-
-                                    <p class="m-0">{{ message.message }}</p>
-
-                                    <div class="d-flex align-items-ends mt-3">
-
-                                        <span class="last-message">
-                                            12:00
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                    </div>
-
-                    <div class="row d-flex">
-
-                        <div class="col-6 pe-5">
-
-                            <div v-for="message in contacts[selectedContactIndex].messages">
-
-                                <div class="white-message d-flex justify-content-between bg-white w-100 rounded-3 p-2 mb-2" v-if="message.status === 'received'">
-
-                                    <p class="m-0">{{ message.message }}</p>
-
-                                    <div class="d-flex align-items-ends mt-3">
-
-                                        <span class="last-message">
-                                            
-                                            12:00
-
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
+                    </div>    
                 </div>
                 <div class="chat d-flex align-items-center justify-content-around w-100">
 
