@@ -184,11 +184,11 @@ createApp({
 
     newListMessage: {
       date: '10/01/2020 15:50:00',
-      message: "",
+      message: '',
       status: 'sent',
     },
 
-    selectedContactIndex: null,
+    selectedContactIndex: 0,
 
  
     };
@@ -198,16 +198,18 @@ createApp({
     
     onEnter(messageElement) {
 
+      console.log(this.onEnter)
       this.contacts[this.selectedContactIndex].messages.push(messageElement);
-      
-      this.newListMessage.message = "";
+
+      this.newListMessage.message = '';
+      console.log(this.newListMessage.message)
     },
 
 
 
     selectContact(index) {
       if (this.selectedContactIndex === index) {
-        this.selectedContactIndex = null; // Deseleziona il contatto se è già selezionato
+        this.selectedContactIndex = 0; // Deseleziona il contatto se è già selezionato
       } else {
         this.selectedContactIndex = index; // Seleziona il nuovo contatto
       }
