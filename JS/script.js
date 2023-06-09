@@ -176,16 +176,35 @@ createApp({
             ],
             
             
+            
+            
         }
         
     ],
-    selectedContactIndex: null
-        
+
+    newListMessage: {
+      date: '10/01/2020 15:50:00',
+      message: "",
+      status: 'sent',
+    },
+
+    selectedContactIndex: null,
 
  
     };
   },
   methods: {
+     
+    
+    onEnter(messageElement) {
+
+      this.contacts[this.selectedContactIndex].messages.push(messageElement);
+      
+      this.newListMessage.message = "";
+    },
+
+
+
     selectContact(index) {
       if (this.selectedContactIndex === index) {
         this.selectedContactIndex = null; // Deseleziona il contatto se è già selezionato
