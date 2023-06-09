@@ -195,14 +195,18 @@ createApp({
   },
   methods: {
      
-    
-    onEnter(messageElement) {
+    onEnter() {
+      const newMessage = {
 
-      console.log(this.onEnter)
-      this.contacts[this.selectedContactIndex].messages.push(messageElement);
+        date: '10/01/2020 15:50:00',
+        message: this.newListMessage.message,
+        status: 'sent',
+        
+      };
+
+      this.contacts[this.selectedContactIndex].messages.push(newMessage);
 
       this.newListMessage.message = '';
-      console.log(this.newListMessage.message)
     },
 
 
