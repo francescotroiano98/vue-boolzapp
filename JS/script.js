@@ -208,26 +208,27 @@ createApp({
         status: 'sent',
 
       };
-
-      this.contacts[this.selectedContactIndex].messages.push(newMessage);
-
-      this.newListMessage.message = '';
-
-      setTimeout(() => {
-
-        const newAnswerMessage = {
-
-          date: '10/01/2020 15:50:00',
-          message: 'ok',
-          status: 'received',
-  
-        };
-        this.contacts[this.selectedContactIndex].messages.push(newAnswerMessage);
+        if( this.newListMessage.message !== ''){
+        this.contacts[this.selectedContactIndex].messages.push(newMessage);
 
         this.newListMessage.message = '';
 
-        
-      }, 1000);
+        setTimeout(() => {
+
+          const newAnswerMessage = {
+
+            date: '10/01/2020 15:50:00',
+            message: 'ok',
+            status: 'received',
+    
+          };
+          this.contacts[this.selectedContactIndex].messages.push(newAnswerMessage);
+
+          this.newListMessage.message = '';
+
+          
+        }, 1000);
+      }
     },
 
 
