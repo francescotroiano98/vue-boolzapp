@@ -182,6 +182,11 @@ createApp({
         
     ],
 
+    
+        researchedContacts: [
+          {}
+        ],
+
     newListMessage: {
       date: '10/01/2020 15:50:00',
       message: '',
@@ -199,6 +204,10 @@ createApp({
     };
   },
   methods: {
+
+    researchContact(){
+      
+    },
      
     onEnter() {
       const newMessage = {
