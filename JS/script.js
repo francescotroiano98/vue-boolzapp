@@ -13,6 +13,8 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      searchTerm: '',
+      
       contacts: [
         {
             name: 'Michele',
@@ -181,12 +183,8 @@ createApp({
         }
         
     ],
-
-    
-        researchedContacts: [
-          {}
-        ],
-
+    filteredContacts: [], // Array per i contatti filtrati
+ 
     newListMessage: {
       date: '10/01/2020 15:50:00',
       message: '',
@@ -199,16 +197,22 @@ createApp({
     },
 
     selectedContactIndex: 0,
+    searchTerm: '',
 
  
     };
   },
   methods: {
 
-    researchContact(){
-      
-    },
-     
+
+    
+      researchContact() {
+          this.filteredContacts = this.contacts.filter(contact => {
+              // Confronta il nome del contatto con l'input di ricerca ignorando maiuscolo/minuscolo
+              return contact.name.toLowerCase().includes(this.searchTerm.toLowerCase());
+          });
+      },
+
     onEnter() {
       const newMessage = {
 
