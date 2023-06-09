@@ -187,6 +187,11 @@ createApp({
       message: '',
       status: 'sent',
     },
+    newListAnswerMessage: {
+      date: '10/01/2020 15:50:00',
+      message: '',
+      status: 'received',
+    },
 
     selectedContactIndex: 0,
 
@@ -201,12 +206,28 @@ createApp({
         date: '10/01/2020 15:50:00',
         message: this.newListMessage.message,
         status: 'sent',
-        
+
       };
 
       this.contacts[this.selectedContactIndex].messages.push(newMessage);
 
       this.newListMessage.message = '';
+
+      setTimeout(() => {
+
+        const newAnswerMessage = {
+
+          date: '10/01/2020 15:50:00',
+          message: 'ok',
+          status: 'received',
+  
+        };
+        this.contacts[this.selectedContactIndex].messages.push(newAnswerMessage);
+
+        this.newListMessage.message = '';
+
+        
+      }, 1000);
     },
 
 
@@ -222,4 +243,5 @@ createApp({
       return this.selectedContactIndex === index;
     }
   }
+
 }).mount('#app');
